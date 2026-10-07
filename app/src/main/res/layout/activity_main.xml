@@ -146,9 +146,12 @@
             android:id="@+id/micButton"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:text="🎤"
-            android:textSize="32sp"
-            android:background="@drawable/mic_button_bg"
+            android:text="🎤\n+"
+            android:textSize="24sp"
+            android:lineSpacingMultiplier="0.8"
+            android:gravity="center"
+            android:background="@drawable/mic_button_new"
+            android:textColor="#FFFFFF"
             android:contentDescription="@string/help" />
     </LinearLayout>
 </LinearLayout>
