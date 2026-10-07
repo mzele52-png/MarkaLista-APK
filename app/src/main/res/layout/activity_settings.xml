@@ -74,9 +74,7 @@
                     android:textColor="#FFFFFF"
                     android:gravity="center_vertical"
                     android:paddingLeft="16dp"
-                    android:paddingRight="16dp"
-                    android:button="@null"
-                    android:drawableEnd="?attr/listChoiceIndicatorMultiple" />
+                    android:paddingRight="16dp" />
 
                 <View
                     android:layout_width="match_parent"
@@ -92,9 +90,7 @@
                     android:textColor="#FFFFFF"
                     android:gravity="center_vertical"
                     android:paddingLeft="16dp"
-                    android:paddingRight="16dp"
-                    android:button="@null"
-                    android:drawableEnd="?attr/listChoiceIndicatorMultiple" />
+                    android:paddingRight="16dp" />
 
                 <View
                     android:layout_width="match_parent"
@@ -110,9 +106,7 @@
                     android:textColor="#FFFFFF"
                     android:gravity="center_vertical"
                     android:paddingLeft="16dp"
-                    android:paddingRight="16dp"
-                    android:button="@null"
-                    android:drawableEnd="?attr/listChoiceIndicatorMultiple" />
+                    android:paddingRight="16dp" />
             </RadioGroup>
         </LinearLayout>
 
@@ -162,9 +156,7 @@
                     android:textColor="#FFFFFF"
                     android:gravity="center_vertical"
                     android:paddingLeft="16dp"
-                    android:paddingRight="16dp"
-                    android:button="@null"
-                    android:drawableEnd="?attr/listChoiceIndicatorMultiple" />
+                    android:paddingRight="16dp" />
 
                 <View
                     android:layout_width="match_parent"
@@ -180,9 +172,7 @@
                     android:textColor="#FFFFFF"
                     android:gravity="center_vertical"
                     android:paddingLeft="16dp"
-                    android:paddingRight="16dp"
-                    android:button="@null"
-                    android:drawableEnd="?attr/listChoiceIndicatorMultiple" />
+                    android:paddingRight="16dp" />
 
                 <View
                     android:layout_width="match_parent"
@@ -198,9 +188,7 @@
                     android:textColor="#FFFFFF"
                     android:gravity="center_vertical"
                     android:paddingLeft="16dp"
-                    android:paddingRight="16dp"
-                    android:button="@null"
-                    android:drawableEnd="?attr/listChoiceIndicatorMultiple" />
+                    android:paddingRight="16dp" />
             </RadioGroup>
         </LinearLayout>
 
