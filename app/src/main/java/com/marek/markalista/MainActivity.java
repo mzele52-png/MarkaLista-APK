@@ -250,9 +250,11 @@ public class MainActivity extends AppCompatActivity {
         java.util.Locale locale = new java.util.Locale(language);
         java.util.Locale.setDefault(locale);
 
-        android.content.res.Configuration config = new android.content.res.Configuration();
-        config.locale = locale;
-        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
+        android.content.res.Configuration config = getResources().getConfiguration();
+        config.setLocale(locale);
+
+        android.content.Context localizedContext = createConfigurationContext(config);
+        getResources().updateConfiguration(config, getDisplayMetrics());
     }
 
     private void applyFontSize() {

@@ -16,9 +16,11 @@ public class SettingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
 
         prefs = getSharedPreferences("MarkaLista", MODE_PRIVATE);
+        applyLanguage();
+
+        setContentView(R.layout.activity_settings);
 
         initLanguage();
         initTheme();
@@ -30,6 +32,16 @@ public class SettingsActivity extends AppCompatActivity {
             getSupportActionBar().setTitle("Ustawienia");
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
+    }
+
+    private void applyLanguage() {
+        String language = prefs.getString("language", "pl");
+        java.util.Locale locale = new java.util.Locale(language);
+        java.util.Locale.setDefault(locale);
+
+        android.content.res.Configuration config = getResources().getConfiguration();
+        config.setLocale(locale);
+        getResources().updateConfiguration(config, getDisplayMetrics());
     }
 
     private void initLanguage() {
