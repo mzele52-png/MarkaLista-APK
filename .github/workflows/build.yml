@@ -2,40 +2,41 @@ name: Build APK
 
 on:
   push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
+    branches: [ main ]
+    tags: [ 'BUILD-*' ]
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-
-    - name: Set up JDK 17
-      uses: actions/setup-java@v5
+    - uses: actions/checkout@v3
+    
+    - name: Set up JDK 21
+      uses: actions/setup-java@v3
       with:
-        java-version: '17'
+        java-version: '21'
         distribution: 'temurin'
+        cache: gradle
 
     - name: Make gradlew executable
-      run: chmod +x ./gradlew
+      run: chmod +x gradlew
 
-    - name: Build APK with Gradle
-      run: ./gradlew assembleDebug
+    - name: Build Debug APK
+      run: ./gradlew assembleDebug --no-daemon
 
-    - name: Upload APK
-      uses: actions/upload-artifact@v4
-      if: success()
+    - name: Upload APK to artifacts
+      uses: actions/upload-artifact@v3
       with:
-        name: app-debug
-        path: app/build/outputs/apk/debug/app-debug.apk
+        name: markalista-debug
+        path: app/build/outputs/apk/debug/
 
     - name: Create Release
+      if: startsWith(github.ref, 'refs/tags/BUILD-')
       uses: softprops/action-gh-release@v1
-      if: startsWith(github.ref, 'refs/tags/')
       with:
         files: app/build/outputs/apk/debug/app-debug.apk
+        generate_release_notes: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
