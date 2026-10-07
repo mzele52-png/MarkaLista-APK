@@ -252,7 +252,7 @@ public class MainActivity extends AppCompatActivity {
 
         android.content.res.Configuration config = new android.content.res.Configuration();
         config.locale = locale;
-        getResources().updateConfiguration(config, getDisplayMetrics());
+        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
     }
 
     private void applyFontSize() {
