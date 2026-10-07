@@ -1,14 +1,17 @@
 package com.marek.markalista;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -27,6 +30,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Apply theme BEFORE setContentView
+        applySettings();
+
         setContentView(R.layout.activity_main);
 
         productInput = findViewById(R.id.productInput);
@@ -184,6 +191,28 @@ public class MainActivity extends AppCompatActivity {
                 productInput.setText(results.get(0));
                 addProduct();
             }
+        }
+    }
+
+    private void applySettings() {
+        SharedPreferences prefs = getSharedPreferences("MarkaLista", MODE_PRIVATE);
+
+        // Apply theme
+        String themeMode = prefs.getString("theme_mode", "system");
+        switch (themeMode) {
+            case "light":
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                break;
+            case "dark":
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                break;
+            default:
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+        }
+
+        // Apply keep screen on flag
+        if (prefs.getBoolean("keep_screen_on", false)) {
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         }
     }
 }
