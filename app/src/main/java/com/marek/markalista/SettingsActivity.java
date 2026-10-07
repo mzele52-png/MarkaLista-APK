@@ -41,7 +41,7 @@ public class SettingsActivity extends AppCompatActivity {
 
         android.content.res.Configuration config = getResources().getConfiguration();
         config.setLocale(locale);
-        getResources().updateConfiguration(config, getDisplayMetrics());
+        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
     }
 
     private void initLanguage() {
