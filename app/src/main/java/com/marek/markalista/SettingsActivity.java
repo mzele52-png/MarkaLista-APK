@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatDelegate;
 
 public class SettingsActivity extends AppCompatActivity {
     private SharedPreferences prefs;
-    private RadioGroup themeGroup, textSizeGroup;
+    private RadioGroup languageGroup, themeGroup, textSizeGroup;
     private Switch wallpaperSwitch, confirmClearSwitch, confirmDeleteSwitch, keepScreenOnSwitch;
 
     @Override
@@ -20,6 +20,7 @@ public class SettingsActivity extends AppCompatActivity {
 
         prefs = getSharedPreferences("MarkaLista", MODE_PRIVATE);
 
+        initLanguage();
         initTheme();
         initTextSize();
         initWallpaper();
@@ -29,6 +30,54 @@ public class SettingsActivity extends AppCompatActivity {
             getSupportActionBar().setTitle("Ustawienia");
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
+    }
+
+    private void initLanguage() {
+        languageGroup = findViewById(R.id.languageGroup);
+        String currentLang = prefs.getString("language", "pl");
+
+        int langId = R.id.langPolish;
+        switch (currentLang) {
+            case "en": langId = R.id.langEnglish; break;
+            case "de": langId = R.id.langGerman; break;
+            case "fr": langId = R.id.langFrench; break;
+            case "es": langId = R.id.langSpanish; break;
+            case "it": langId = R.id.langItalian; break;
+            case "pt": langId = R.id.langPortuguese; break;
+            case "ru": langId = R.id.langRussian; break;
+            case "uk": langId = R.id.langUkrainian; break;
+            case "cs": langId = R.id.langCzech; break;
+            case "sk": langId = R.id.langSlovak; break;
+            case "hu": langId = R.id.langHungarian; break;
+            case "ro": langId = R.id.langRomanian; break;
+            case "tr": langId = R.id.langTurkish; break;
+            case "el": langId = R.id.langGreek; break;
+            case "ja": langId = R.id.langJapanese; break;
+            default: langId = R.id.langPolish;
+        }
+        languageGroup.check(langId);
+
+        languageGroup.setOnCheckedChangeListener((group, checkedId) -> {
+            String lang = "pl";
+            if (checkedId == R.id.langEnglish) lang = "en";
+            else if (checkedId == R.id.langGerman) lang = "de";
+            else if (checkedId == R.id.langFrench) lang = "fr";
+            else if (checkedId == R.id.langSpanish) lang = "es";
+            else if (checkedId == R.id.langItalian) lang = "it";
+            else if (checkedId == R.id.langPortuguese) lang = "pt";
+            else if (checkedId == R.id.langRussian) lang = "ru";
+            else if (checkedId == R.id.langUkrainian) lang = "uk";
+            else if (checkedId == R.id.langCzech) lang = "cs";
+            else if (checkedId == R.id.langSlovak) lang = "sk";
+            else if (checkedId == R.id.langHungarian) lang = "hu";
+            else if (checkedId == R.id.langRomanian) lang = "ro";
+            else if (checkedId == R.id.langTurkish) lang = "tr";
+            else if (checkedId == R.id.langGreek) lang = "el";
+            else if (checkedId == R.id.langJapanese) lang = "ja";
+
+            prefs.edit().putString("language", lang).apply();
+            recreate();
+        });
     }
 
     private void initTheme() {

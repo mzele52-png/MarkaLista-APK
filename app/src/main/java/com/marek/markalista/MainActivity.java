@@ -31,8 +31,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Apply theme BEFORE setContentView
+        // Apply theme and language BEFORE setContentView
         applySettings();
+        applyLanguage();
 
         setContentView(R.layout.activity_main);
         applyFontSize();
@@ -164,9 +165,13 @@ public class MainActivity extends AppCompatActivity {
             micButton.setBackgroundResource(R.drawable.mic_button_listening);
         }
 
+        SharedPreferences prefs = getSharedPreferences("MarkaLista", MODE_PRIVATE);
+        String language = prefs.getString("language", "pl");
+        String languageTag = getLanguageTag(language);
+
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
-        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "pl-PL");
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, languageTag);
         intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Powiedz nazwę produktu");
         try {
             startActivityForResult(intent, SPEECH_REQUEST_CODE);
@@ -175,6 +180,27 @@ public class MainActivity extends AppCompatActivity {
                 micButton.setBackgroundResource(R.drawable.mic_button_bg);
             }
             productInput.requestFocus();
+        }
+    }
+
+    private String getLanguageTag(String language) {
+        switch (language) {
+            case "en": return "en-US";
+            case "de": return "de-DE";
+            case "fr": return "fr-FR";
+            case "es": return "es-ES";
+            case "it": return "it-IT";
+            case "pt": return "pt-BR";
+            case "ru": return "ru-RU";
+            case "uk": return "uk-UA";
+            case "cs": return "cs-CZ";
+            case "sk": return "sk-SK";
+            case "hu": return "hu-HU";
+            case "ro": return "ro-RO";
+            case "tr": return "tr-TR";
+            case "el": return "el-GR";
+            case "ja": return "ja-JP";
+            default: return "pl-PL";
         }
     }
 
@@ -215,6 +241,18 @@ public class MainActivity extends AppCompatActivity {
         if (prefs.getBoolean("keep_screen_on", false)) {
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         }
+    }
+
+    private void applyLanguage() {
+        SharedPreferences prefs = getSharedPreferences("MarkaLista", MODE_PRIVATE);
+        String language = prefs.getString("language", "pl");
+
+        java.util.Locale locale = new java.util.Locale(language);
+        java.util.Locale.setDefault(locale);
+
+        android.content.res.Configuration config = new android.content.res.Configuration();
+        config.locale = locale;
+        getResources().updateConfiguration(config, getDisplayMetrics());
     }
 
     private void applyFontSize() {
