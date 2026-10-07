@@ -142,44 +142,32 @@
             android:background="?attr/selectableItemBackground"
             android:layout_marginEnd="16dp" />
 
-        <FrameLayout
+        <LinearLayout
+            android:id="@+id/micButton"
             android:layout_width="70dp"
-            android:layout_height="70dp">
+            android:layout_height="70dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/mic_button_new"
+            android:contentDescription="@string/help">
 
-            <!-- Gradient background -->
-            <View
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:background="@drawable/mic_button_new" />
-
-            <!-- Microphone -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="🎤"
                 android:textSize="40sp"
                 android:textColor="#FFFFFF"
-                android:layout_gravity="center" />
+                android:gravity="center" />
 
-            <!-- Plus (bottom right) -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="+"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:textColor="#FFFFFF"
-                android:layout_gravity="bottom|end"
-                android:layout_marginEnd="6dp"
-                android:layout_marginBottom="6dp" />
-
-            <!-- Click listener button (invisible, fills whole area) -->
-            <Button
-                android:id="@+id/micButton"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:background="@android:color/transparent"
-                android:contentDescription="@string/help" />
-        </FrameLayout>
+                android:gravity="center"
+                android:layout_marginTop="-6dp" />
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
