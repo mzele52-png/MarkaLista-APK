@@ -142,32 +142,14 @@
             android:background="?attr/selectableItemBackground"
             android:layout_marginEnd="16dp" />
 
-        <LinearLayout
+        <Button
             android:id="@+id/micButton"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:background="@drawable/mic_button_new"
-            android:contentDescription="@string/help">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="🎤"
-                android:textSize="40sp"
-                android:textColor="#FFFFFF"
-                android:gravity="center" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:textColor="#FFFFFF"
-                android:gravity="center"
-                android:layout_marginTop="-6dp" />
-        </LinearLayout>
+            android:text="🎤"
+            android:textSize="36sp"
+            android:background="@drawable/mic_button_bg"
+            android:textColor="#FFFFFF"
+            android:contentDescription="@string/help" />
     </LinearLayout>
 </LinearLayout>
