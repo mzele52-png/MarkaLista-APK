@@ -80,28 +80,23 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/productList"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="12dp"
-            android:background="#00000000" />
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/emptyStateContainer"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:visibility="visible">
+            android:background="#00000000"
+            android:nestedScrollingEnabled="false"
+            android:scrollbars="none" />
 
         <LinearLayout
+            android:id="@+id/emptyStateContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center"
-            android:padding="16dp">
+            android:padding="16dp"
+            android:visibility="gone">
             <TextView
                 android:id="@+id/cartEmoji"
                 android:layout_width="wrap_content"
