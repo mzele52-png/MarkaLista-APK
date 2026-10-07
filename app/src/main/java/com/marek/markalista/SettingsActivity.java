@@ -56,6 +56,7 @@ public class SettingsActivity extends AppCompatActivity {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
             }
             prefs.edit().putString("theme_mode", theme).apply();
+            recreate();
         });
     }
 
@@ -81,6 +82,7 @@ public class SettingsActivity extends AppCompatActivity {
                 size = "normal";
             }
             prefs.edit().putString("font_size", size).apply();
+            recreate();
         });
     }
 

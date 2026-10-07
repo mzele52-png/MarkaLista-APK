@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         applySettings();
 
         setContentView(R.layout.activity_main);
+        applyFontSize();
 
         productInput = findViewById(R.id.productInput);
         addButton = findViewById(R.id.addButton);
@@ -210,9 +211,43 @@ public class MainActivity extends AppCompatActivity {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
         }
 
-        // Apply keep screen on flag
+        // Keep screen on flag
         if (prefs.getBoolean("keep_screen_on", false)) {
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        }
+    }
+
+    private void applyFontSize() {
+        SharedPreferences prefs = getSharedPreferences("MarkaLista", MODE_PRIVATE);
+        String fontSize = prefs.getString("font_size", "normal");
+        float scale = 1.0f;
+
+        switch (fontSize) {
+            case "small":
+                scale = 0.8f;
+                break;
+            case "large":
+                scale = 1.2f;
+                break;
+            default:
+                scale = 1.0f;
+        }
+
+        applyFontSizeToView(findViewById(android.R.id.content), scale);
+    }
+
+    private void applyFontSizeToView(View view, float scale) {
+        if (view instanceof TextView && !(view instanceof Button)) {
+            TextView tv = (TextView) view;
+            float currentSize = tv.getTextSize() / getResources().getDisplayMetrics().scaledDensity;
+            tv.setTextSize(currentSize * scale);
+        }
+
+        if (view instanceof android.view.ViewGroup) {
+            android.view.ViewGroup vg = (android.view.ViewGroup) view;
+            for (int i = 0; i < vg.getChildCount(); i++) {
+                applyFontSizeToView(vg.getChildAt(i), scale);
+            }
         }
     }
 }
