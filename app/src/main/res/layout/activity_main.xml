@@ -142,38 +142,16 @@
             android:background="?attr/selectableItemBackground"
             android:layout_marginEnd="16dp" />
 
-        <FrameLayout
+        <Button
+            android:id="@+id/micButton"
             android:layout_width="70dp"
-            android:layout_height="70dp">
-
-            <Button
-                android:id="@+id/micButton"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:text=""
-                android:background="@drawable/mic_button_new"
-                android:contentDescription="@string/help" />
-
-            <!-- Microphone icon -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="🎤"
-                android:textSize="36sp"
-                android:layout_gravity="center"
-                android:textColor="#FFFFFF" />
-
-            <!-- Plus symbol -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_gravity="bottom|right"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-                android:textColor="#FFFFFF" />
-        </FrameLayout>
+            android:layout_height="70dp"
+            android:text="🎤\n+"
+            android:textSize="28sp"
+            android:lineSpacingExtra="-8sp"
+            android:gravity="center"
+            android:background="@drawable/mic_button_new"
+            android:textColor="#FFFFFF"
+            android:contentDescription="@string/help" />
     </LinearLayout>
 </LinearLayout>
