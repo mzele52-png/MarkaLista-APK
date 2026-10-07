@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MarkaLista</string>
+    <string name="title">MarkaLista</string>
+    <string name="add_product_hint">Přidat produkt…</string>
+    <string name="add_button">+</string>
+    <string name="empty_list">Seznam je prázdný</string>
+    <string name="empty_message">Přidejte své první nákupy!</string>
+    <string name="ad_banner">Prostor pro reklamu</string>
+    <string name="help">Pomoc</string>
+    <string name="settings">Nastavení</string>
+    <string name="base">Báze</string>
+    <string name="help_text">Jak používat MarkaListu:\n\n1. Zadejte název produktu\n2. Klikněte na tlačítko +\n3. Produkt se objeví v seznamu\n4. Klikněte na ikonu koše pro smazání</string>
+    <string name="delete">Smazat</string>
+</resources>

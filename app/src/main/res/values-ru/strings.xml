@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">МаркаЛиста</string>
+    <string name="title">МаркаЛиста</string>
+    <string name="add_product_hint">Добавить товар…</string>
+    <string name="add_button">+</string>
+    <string name="empty_list">Список пуст</string>
+    <string name="empty_message">Добавьте ваши первые покупки!</string>
+    <string name="ad_banner">Место для объявлений</string>
+    <string name="help">Помощь</string>
+    <string name="settings">Настройки</string>
+    <string name="base">База</string>
+    <string name="help_text">Как использовать МаркаЛиста:\n\n1. Введите название продукта\n2. Нажмите кнопку +\n3. Продукт появится в списке\n4. Нажмите значок корзины для удаления</string>
+    <string name="delete">Удалить</string>
+</resources>

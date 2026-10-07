@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">マルカリスタ</string>
+    <string name="title">マルカリスタ</string>
+    <string name="add_product_hint">製品を追加…</string>
+    <string name="add_button">+</string>
+    <string name="empty_list">リストは空です</string>
+    <string name="empty_message">最初の買い物を追加してください！</string>
+    <string name="ad_banner">広告バナー領域</string>
+    <string name="help">ヘルプ</string>
+    <string name="settings">設定</string>
+    <string name="base">ベース</string>
+    <string name="help_text">マルカリスタの使い方:\n\n1. 製品名を入力\n2. +ボタンをクリック\n3. 製品がリストに表示\n4. ゴミ箱アイコンをクリックして削除</string>
+    <string name="delete">削除</string>
+</resources>

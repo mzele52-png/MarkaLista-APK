@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd *)",
+      "Read(//private/tmp/**)",
+      "Bash(unzip -q gradle-9.zip)",
+      "Bash(rm -rf gradle-9*)",
+      "Bash(unzip -q -o gradle-9.zip)",
+      "Bash(/tmp/gradle-9.0.0/bin/gradle --version)",
+      "Read(//Volumes/ADATA SE880/Android/sdk/build-tools/35.0.0/**)",
+      "Read(//Volumes/ADATA SE880/Android/sdk/build-tools/**)",
+      "Bash(yes)",
+      "Bash(sdkmanager --install 'build-tools;35.0.0')",
+      "Bash(adb install *)",
+      "Bash(adb devices *)",
+      "Bash(adb shell *)"
+    ]
+  }
+}

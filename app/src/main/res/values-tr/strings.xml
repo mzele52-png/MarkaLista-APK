@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MarkaLista</string>
+    <string name="title">MarkaLista</string>
+    <string name="add_product_hint">Ürün ekle…</string>
+    <string name="add_button">+</string>
+    <string name="empty_list">Liste boş</string>
+    <string name="empty_message">İlk alışverişlerinizi ekleyin!</string>
+    <string name="ad_banner">Reklam Alanı</string>
+    <string name="help">Yardım</string>
+    <string name="settings">Ayarlar</string>
+    <string name="base">Taban</string>
+    <string name="help_text">MarkaLista nasıl kullanılır:\n\n1. Ürün adını yazın\n2. + düğmesine tıklayın\n3. Ürün listede görünür\n4. Silmek için çöp kutusu simgesine tıklayın</string>
+    <string name="delete">Sil</string>
+</resources>

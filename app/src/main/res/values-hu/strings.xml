@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MarkaLista</string>
+    <string name="title">MarkaLista</string>
+    <string name="add_product_hint">Termék hozzáadása…</string>
+    <string name="add_button">+</string>
+    <string name="empty_list">A lista üres</string>
+    <string name="empty_message">Adja hozzá első vásárlásait!</string>
+    <string name="ad_banner">Hirdetési terület</string>
+    <string name="help">Súgó</string>
+    <string name="settings">Beállítások</string>
+    <string name="base">Bázis</string>
+    <string name="help_text">A MarkaLista használata:\n\n1. Írja be a termék nevét\n2. Kattintson a + gombra\n3. A termék megjelenik a listában\n4. Kattintson a kuka ikonra a törléséhez</string>
+    <string name="delete">Törlés</string>
+</resources>

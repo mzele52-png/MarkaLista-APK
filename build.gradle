@@ -1,0 +1,17 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.0.0'
+    }
+}
+
+// allprojects {
+//     layout.buildDirectory = file("/tmp/gradle-builds/MarkaLista/${project.name}")
+// }
+
+task clean(type: Delete) {
+    delete layout.buildDirectory
+}

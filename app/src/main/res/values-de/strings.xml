@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MarkaLista</string>
+    <string name="title">MarkaLista</string>
+    <string name="add_product_hint">Produkt hinzufügen…</string>
+    <string name="add_button">+</string>
+    <string name="empty_list">Liste ist leer</string>
+    <string name="empty_message">Fügen Sie Ihre ersten Einkäufe hinzu!</string>
+    <string name="ad_banner">Anzeigenbanner-Platz</string>
+    <string name="help">Hilfe</string>
+    <string name="settings">Einstellungen</string>
+    <string name="base">Basis</string>
+    <string name="help_text">So verwenden Sie MarkaLista:\n\n1. Produktname eingeben\n2. + Schaltfläche klicken\n3. Produkt erscheint auf Liste\n4. Papierkorbsymbol klicken zum Löschen</string>
+    <string name="delete">Löschen</string>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">МаркаЛіста</string>
+    <string name="title">МаркаЛіста</string>
+    <string name="add_product_hint">Додати товар…</string>
+    <string name="add_button">+</string>
+    <string name="empty_list">Список порожній</string>
+    <string name="empty_message">Додайте свої перші покупки!</string>
+    <string name="ad_banner">Місце для оголошень</string>
+    <string name="help">Допомога</string>
+    <string name="settings">Налаштування</string>
+    <string name="base">База</string>
+    <string name="help_text">Як використовувати МаркаЛіста:\n\n1. Введіть назву товару\n2. Натисніть кнопку +\n3. Товар з\'явиться у списку\n4. Натисніть значок кошика для видалення</string>
+    <string name="delete">Видалити</string>
+</resources>

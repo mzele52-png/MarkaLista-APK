@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ΜάρκαΛίστα</string>
+    <string name="title">ΜάρκαΛίστα</string>
+    <string name="add_product_hint">Προσθήκη προϊόντος…</string>
+    <string name="add_button">+</string>
+    <string name="empty_list">Η λίστα είναι κενή</string>
+    <string name="empty_message">Προσθέστε τις πρώτες σας αγορές!</string>
+    <string name="ad_banner">Χώρος Διαφήμισης</string>
+    <string name="help">Βοήθεια</string>
+    <string name="settings">Ρυθμίσεις</string>
+    <string name="base">Βάση</string>
+    <string name="help_text">Πώς να χρησιμοποιήσετε ΜάρκαΛίστα:\n\n1. Πληκτρολογήστε το όνομα του προϊόντος\n2. Κάντε κλικ στο κουμπί +\n3. Το προϊόν εμφανίζεται στη λίστα\n4. Κάντε κλικ στο εικονίδιο καλαθιού για διαγραφή</string>
+    <string name="delete">Διαγραφή</string>
+</resources>

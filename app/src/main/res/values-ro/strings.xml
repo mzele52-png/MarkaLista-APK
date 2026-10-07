@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MarkaLista</string>
+    <string name="title">MarkaLista</string>
+    <string name="add_product_hint">Adaugă produs…</string>
+    <string name="add_button">+</string>
+    <string name="empty_list">Lista este goală</string>
+    <string name="empty_message">Adaugă-ți primele cumpărături!</string>
+    <string name="ad_banner">Spațiu Reclamă</string>
+    <string name="help">Ajutor</string>
+    <string name="settings">Setări</string>
+    <string name="base">Bază</string>
+    <string name="help_text">Cum să folosești MarkaLista:\n\n1. Tastează numele produsului\n2. Dă clic pe butonul +\n3. Produsul apare în listă\n4. Dă clic pe pictograma coșului pentru a șterge</string>
+    <string name="delete">Șterge</string>
+</resources>

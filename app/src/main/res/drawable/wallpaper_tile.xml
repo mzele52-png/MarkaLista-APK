@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Kafelek tapety: kolorowe miniaturki produktów (kontury), rozrzucone
+     i obrócone, żeby powtarzanie kafelka nie rzucało się w oczy.
+     W appce wyświetlany półprzezroczyście (patrz Wallpaper.qml). -->
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="360" viewBox="0 0 360 360"
+     fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+
+  <!-- marchewka -->
+  <g transform="translate(18 14) rotate(-28 30 30)">
+    <path d="M24 20 C30 17 38 18 41 24 L22 58 C19 60 16 58 17 55 Z" stroke="#f08a24"/>
+    <path d="M27 30 L32 31 M24 39 L29 40 M21 48 L25 49" stroke="#f08a24"/>
+    <path d="M36 19 C36 12 40 8 44 6 M37 19 C40 14 46 12 51 13 M35 19 C33 13 29 10 25 10" stroke="#4caf50"/>
+  </g>
+
+  <!-- pomidor -->
+  <g transform="translate(140 6) rotate(12 30 30)">
+    <path d="M30 18 C44 18 52 28 50 40 C48 52 38 56 30 56 C22 56 12 52 10 40 C8 28 16 18 30 18 Z" stroke="#e53935"/>
+    <path d="M30 18 L30 10 M30 19 L22 14 M30 19 L38 14 M30 19 L24 23 M30 19 L36 23" stroke="#4caf50"/>
+  </g>
+
+  <!-- karton mleka -->
+  <g transform="translate(262 22) rotate(-10 30 30)">
+    <path d="M18 24 L24 12 H38 L44 24 V56 H18 Z M18 24 H44 M24 12 L30 24 L38 12" stroke="#2f80ed"/>
+    <path d="M22 40 C26 36 30 44 34 40 C37 37 40 42 40 42" stroke="#2f80ed"/>
+  </g>
+
+  <!-- chleb -->
+  <g transform="translate(84 92) rotate(8 32 30)">
+    <path d="M8 36 C8 22 18 16 32 16 C46 16 56 22 56 36 V48 H8 Z" stroke="#b7793b"/>
+    <path d="M20 26 L26 34 M30 24 L36 32 M40 26 L46 34" stroke="#b7793b"/>
+  </g>
+
+  <!-- jabłko -->
+  <g transform="translate(208 108) rotate(-14 30 30)">
+    <path d="M30 22 C22 16 10 20 10 34 C10 48 20 58 28 56 C29 55 31 55 32 56 C40 58 50 48 50 34 C50 20 38 16 30 22 Z" stroke="#43a047"/>
+    <path d="M30 22 C30 16 32 12 35 9" stroke="#8d6e63"/>
+    <path d="M33 14 C38 10 44 11 46 14 C42 17 37 17 33 14 Z" stroke="#43a047"/>
+  </g>
+
+  <!-- ser -->
+  <g transform="translate(16 170) rotate(18 30 30)">
+    <path d="M8 44 L52 22 L52 48 L8 52 Z M8 44 L8 52" stroke="#f2b705"/>
+    <circle cx="26" cy="44" r="3.5" stroke="#f2b705"/>
+    <circle cx="40" cy="38" r="2.5" stroke="#f2b705"/>
+    <circle cx="44" cy="46" r="2" stroke="#f2b705"/>
+  </g>
+
+  <!-- jajko -->
+  <g transform="translate(150 196) rotate(-20 30 30)">
+    <path d="M30 10 C40 10 48 26 48 38 C48 50 40 56 30 56 C20 56 12 50 12 38 C12 26 20 10 30 10 Z" stroke="#c9a36b"/>
+  </g>
+
+  <!-- banan -->
+  <g transform="translate(270 190) rotate(25 30 30)">
+    <path d="M12 20 C14 42 30 54 52 48 C50 44 46 42 42 42 C28 42 20 32 18 18 Z" stroke="#e6c200"/>
+    <path d="M12 20 L16 14" stroke="#8d6e63"/>
+  </g>
+
+  <!-- ryba -->
+  <g transform="translate(66 280) rotate(-8 32 30)">
+    <path d="M10 30 C18 18 34 16 46 30 C34 44 18 42 10 30 Z M46 30 L56 20 L56 40 Z" stroke="#26a69a"/>
+    <circle cx="20" cy="28" r="1.6" stroke="#26a69a"/>
+  </g>
+
+  <!-- gruszka -->
+  <g transform="translate(222 282) rotate(14 30 30)">
+    <path d="M30 14 C26 14 24 20 24 26 C24 30 14 34 14 44 C14 52 22 56 30 56 C38 56 46 52 46 44 C46 34 36 30 36 26 C36 20 34 14 30 14 Z" stroke="#9ccc65"/>
+    <path d="M30 14 L32 8" stroke="#8d6e63"/>
+  </g>
+</svg>

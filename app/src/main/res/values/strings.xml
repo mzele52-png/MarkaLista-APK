@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MarkaLista</string>
+    <string name="title">Lista zakupów</string>
+    <string name="add_product_hint">Dodaj produkt…</string>
+    <string name="add_button">+</string>
+    <string name="empty_list">Lista jest pusta</string>
+    <string name="empty_message">Przytrzymaj mikrofon i powiedz, co kupić, albo wpisz u góry.</string>
+    <string name="ad_banner">Ad Banner Space</string>
+    <string name="help">Pomoc</string>
+    <string name="settings">Ustawienia</string>
+    <string name="base">Baza</string>
+    <string name="help_text">Jak używać MarkaListy:\n\n1. Wpisz nazwę produktu w pole\n2. Kliknij przycisk +\n3. Produkt pojawi się na liście\n4. Kliknij ikonę kosza aby usunąć</string>
+    <string name="delete">Usuń</string>
+</resources>

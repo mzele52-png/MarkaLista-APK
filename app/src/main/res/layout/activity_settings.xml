@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#1a1a1a">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Motyw"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <RadioGroup
+        android:id="@+id/themeGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/themeLight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🌙 Jasny"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="12dp" />
+
+        <RadioButton
+            android:id="@+id/themeDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="☀️ Ciemny"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="12dp" />
+
+        <RadioButton
+            android:id="@+id/themeSystem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🔄 Systemowy"
+            android:textColor="#FFFFFF" />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rozmiar tekstu"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp" />
+
+    <RadioGroup
+        android:id="@+id/textSizeGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/textSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mały (14sp)"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="12dp" />
+
+        <RadioButton
+            android:id="@+id/textNormal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Normalny (16sp)"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="12dp" />
+
+        <RadioButton
+            android:id="@+id/textLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Duży (18sp)"
+            android:textColor="#FFFFFF" />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Wersja: 0.1"
+        android:textColor="#888888"
+        android:textSize="14sp"
+        android:layout_marginTop="32dp"
+        android:gravity="center" />
+
+</LinearLayout>
